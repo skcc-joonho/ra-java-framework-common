@@ -36,7 +36,7 @@ dependencies {
 bootJar {
     manifest {
         attributes(
-                'Main-Class': 'com.skcc.ra.account.AccountMainApp'
+                'Start-Class': 'com.skcc.ra.account.AccountMainApp'
         )
     }
 }

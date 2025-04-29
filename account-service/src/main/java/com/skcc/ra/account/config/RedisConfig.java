@@ -32,6 +32,15 @@ import java.time.Duration;
 @Configuration
 @EnableRedisRepositories
 public class RedisConfig {
+    @Value("${spring.data.redis.host}")
+    private String host;
+
+    @Value("${spring.data.redis.port}")
+    private int port;
+
+    @Value("${spring.data.redis.password}")
+    private String password;
+
     @Value("${spring.data.redis.timeout}")
     private int timeout;
 
@@ -48,7 +57,11 @@ public class RedisConfig {
     private int minIdle;
 
     private RedisStandaloneConfiguration redisStandaloneConfiguration(){
-        return new RedisStandaloneConfiguration();
+        RedisStandaloneConfiguration redisStandaloneConfiguration = new RedisStandaloneConfiguration();
+        redisStandaloneConfiguration.setHostName(host);
+        redisStandaloneConfiguration.setPort(port);
+        redisStandaloneConfiguration.setPassword(password);
+        return redisStandaloneConfiguration;
     }
 
     @Bean

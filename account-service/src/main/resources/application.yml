@@ -13,7 +13,7 @@ spring:
     password: qwer1234!
 
 app:
-  jwtSecret: adtcapsSecretKey
+  jwtSecret: jwtSecretKey
   jwtExpirationMs: 900000
   jwtRefreshExpirationMs: 86400000
   jwtTimeout: 36000000 # 150분
