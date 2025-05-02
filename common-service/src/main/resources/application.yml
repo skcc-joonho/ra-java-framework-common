@@ -67,6 +67,24 @@ spring:
     activate:
       on-profile: dev-env
 
+  data:
+    redis:
+      database: 0
+      host: redis.temp-infra.svc.cluster.local
+      port: 6379
+      password: "changeme"
+      timeout: 30000
+      lettuce:
+        pool:
+          maxTotal: 8
+          maxWaitMillis: 10000
+          maxIdle: 8
+          minIdle: 0
+
+feign:
+  account-service.url: http://account:8080
+  authorization-service.url: http://account:8080
+
 ---
 
 spring:
