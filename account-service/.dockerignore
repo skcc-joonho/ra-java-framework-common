@@ -1,0 +1,13 @@
+.git
+.gitignore
+.gradle
+build
+out
+*.log
+*.iml
+.idea
+*.swp
+*.swo
+.DS_Store
+README.md
+LICENSE 

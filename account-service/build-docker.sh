@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Set variables
-IMAGE_NAME="common-service"
-IMAGE_TAG="latest"
+IMAGE_NAME="account-service"
+IMAGE_TAG="0.1.0"
 REGISTRY="agsats.azurecr.io"  # Docker Hub 또는 private registry URL
 
 # Clean previous builds
@@ -10,11 +10,11 @@ echo "Cleaning previous builds..."
 cd ..  # Move to the root directory
 rm -rf common-export/build
 rm -rf account-export/build
-rm -rf common-service/build
+rm -rf account-service/build
 
 # Build the image from the root directory
 echo "Building Docker image..."
-docker build -t ${IMAGE_NAME}:${IMAGE_TAG} -f common-service/Dockerfile .
+docker build -t ${IMAGE_NAME}:${IMAGE_TAG} -f account-service/Dockerfile .
 
 # Tag the image for registry
 echo "Tagging image for registry..."
