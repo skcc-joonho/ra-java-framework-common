@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: temp-infra
+  labels:
+    name: temp-infra
+    purpose: temporary-infrastructure
+    lifecycle: temporary 

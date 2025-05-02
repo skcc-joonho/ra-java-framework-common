@@ -1,0 +1,22 @@
+replicaCount: 1
+
+image:
+  repository: mysql
+  tag: 8.0.32
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 3306
+  targetPort: 3306
+
+resources:
+  limits:
+    cpu: 1000m
+    memory: 1Gi
+  requests:
+    cpu: 500m
+    memory: 512Mi
+
+env:
+  MYSQL_ROOT_PASSWORD: "qwer1234" 

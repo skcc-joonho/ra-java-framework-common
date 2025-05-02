@@ -1,0 +1,21 @@
+replicaCount: 1
+
+namespace: temp-infra
+
+image:
+  repository: wurstmeister/zookeeper
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 2181
+  targetPort: 2181
+
+resources:
+  limits:
+    cpu: 500m
+    memory: 512Mi
+  requests:
+    cpu: 200m
+    memory: 256Mi 
