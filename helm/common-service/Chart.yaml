@@ -1,0 +1,9 @@
+apiVersion: v2
+name: common-service
+description: A Helm chart for Common Service
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
+maintainers:
+  - name: Joonho Park
+    email: joonho.park@sk.com 

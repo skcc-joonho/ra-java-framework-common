@@ -1,0 +1,33 @@
+replicaCount: 1
+
+image:
+  repository: agsats.azurecr.io/common-service
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+imagePullSecrets:
+  - name: ghcr-secret
+
+service:
+  type: ClusterIP
+  port: 8080
+
+resources:
+  limits:
+    cpu: 1000m
+    memory: 1Gi
+  requests:
+    cpu: 500m
+    memory: 512Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+env:
+  - name: SPRING_PROFILES_ACTIVE
+    value: "dev"
+  - name: TZ
+    value: "Asia/Seoul" 

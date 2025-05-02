@@ -1,0 +1,12 @@
+.git
+.gitignore
+.gradle
+**/build
+*.log
+*.iml
+.idea
+*.md
+.DS_Store
+**/src/test
+**/src/main/resources/application-*.yml
+**/src/main/resources/application-*.properties 
