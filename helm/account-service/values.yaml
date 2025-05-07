@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: agsats.azurecr.io/account-service
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   tag: "0.1.0"
 
 imagePullSecrets:

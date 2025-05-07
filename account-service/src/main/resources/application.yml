@@ -89,11 +89,11 @@ spring:
 
 feign:
   common-service:
-    url: http://common:8080
+    url: http://common-service.ra-common.svc.cluster.local:8080
   messaging-service: 
-    url: http://messaging:8080
+    url: http://messaging-service.ra-common.svc.cluster.local:8080
   authorization-service:
-    url: http://account:8080
+    url: http://account-service.ra-common.svc.cluster.local:8080
   autoconfiguration:
     jackson:
       enabled: true

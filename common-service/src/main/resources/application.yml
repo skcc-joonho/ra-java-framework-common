@@ -82,8 +82,8 @@ spring:
           minIdle: 0
 
 feign:
-  account-service.url: http://account:8080
-  authorization-service.url: http://account:8080
+  account-service.url: http://account-service.ra-common.svc.cluster.local:8080
+  authorization-service.url: http://account-service.ra-common.svc.cluster.local:8080
 
 ---
 
