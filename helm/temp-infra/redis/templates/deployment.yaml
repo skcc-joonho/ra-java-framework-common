@@ -25,4 +25,6 @@ spec:
           command: ["redis-server"]
           args: ["--requirepass", "{{ .Values.redisPassword }}", "--port", "{{ .Values.service.targetPort }}"]
           resources:
-            {{- toYaml .Values.resources | nindent 12 }} 
+            {{- toYaml .Values.resources | nindent 12 }}
+      nodeSelector:
+        agentpool: agent2 

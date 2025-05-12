@@ -36,4 +36,6 @@ spec:
             - name: KAFKA_AUTO_CREATE_TOPICS_ENABLE
               value: {{ .Values.env.KAFKA_AUTO_CREATE_TOPICS_ENABLE | quote }}
           resources:
-            {{- toYaml .Values.resources | nindent 12 }} 
+            {{- toYaml .Values.resources | nindent 12 }}
+      nodeSelector:
+        agentpool: agent2 

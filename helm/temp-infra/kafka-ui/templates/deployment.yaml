@@ -28,4 +28,6 @@ spec:
               value: {{ $value | quote }}
             {{- end }}
           resources:
-            {{- toYaml .Values.resources | nindent 12 }} 
+            {{- toYaml .Values.resources | nindent 12 }}
+      nodeSelector:
+        agentpool: agent2 
